@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp5
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int sayi1=Convert.ToInt32(textBox1.Text);
+            int sayi2 = Convert.ToInt32(textBox2.Text);
+
+            int kucuk = sayi1;
+            if (sayi2 <kucuk) {
+            kucuk = sayi2;
+            }
+
+            int ebob = 1;
+            int i = 1;
+            while (i<=kucuk)
+            {
+                if (sayi1%i==0 && sayi2%i ==0)
+                {
+                    ebob = i;
+                }
+                i++;
+            }
+            listBox1.Items.Add(ebob);
+        }
+    }
+}
