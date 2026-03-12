@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\100 sayı oyunu\bin\Debug\100 sayı oyunu.exe.config
+C:\Users\User\source\repos\100 sayı oyunu\bin\Debug\100 sayı oyunu.exe
+C:\Users\User\source\repos\100 sayı oyunu\bin\Debug\100 sayı oyunu.pdb
+C:\Users\User\source\repos\100 sayı oyunu\obj\Debug\100 sayı oyunu.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\100 sayı oyunu\obj\Debug\_100_sayı_oyunu.Form1.resources
+C:\Users\User\source\repos\100 sayı oyunu\obj\Debug\_100_sayı_oyunu.Properties.Resources.resources
+C:\Users\User\source\repos\100 sayı oyunu\obj\Debug\100 sayı oyunu.csproj.GenerateResource.cache
+C:\Users\User\source\repos\100 sayı oyunu\obj\Debug\100 sayı oyunu.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\100 sayı oyunu\obj\Debug\100 sayı oyunu.exe
+C:\Users\User\source\repos\100 sayı oyunu\obj\Debug\100 sayı oyunu.pdb

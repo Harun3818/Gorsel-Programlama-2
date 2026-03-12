@@ -1,0 +1,79 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace _100_sayı_oyunu
+{
+    public partial class Form1 : Form
+    {
+        Random rnd = new Random();
+        int sayi;
+        int hak = 4;
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int tahmin = Convert.ToInt32(txtTahmin.Text);
+
+            while (hak > 0)
+            {
+                if (tahmin == sayi)
+                {
+                    lblSonuc.Text = "Tebrikler doğru tahmin!";
+                    btnTahmin.Enabled = false;
+                    break;
+                }
+
+                hak--;
+
+                if (hak == 3)
+                    panel1.BackColor = Color.Red;
+
+                else if (hak == 2)
+                    panel2.BackColor = Color.Red;
+
+                else if (hak == 1)
+                    panel3.BackColor = Color.Red;
+
+                else if (hak == 0)
+                    panel4.BackColor = Color.Red;
+
+                if (tahmin > sayi)
+                    lblSonuc.Text = "Daha küçük sayı gir";
+
+                else
+                    lblSonuc.Text = "Daha büyük sayı gir";
+
+                if (hak == 0)
+                {
+                    lblSonuc.Text = "Oyun bitti! Sayı: " + sayi;
+                    btnTahmin.Enabled = false;
+                }
+
+                break;
+            }
+
+            txtTahmin.Clear();
+        }
+
+        private void txtTahmin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            sayi = rnd.Next(1, 101);
+        }
+    }
+}
