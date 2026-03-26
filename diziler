@@ -86,7 +86,69 @@ namespace _5.hafta
             listBox1.Items.Add(i); 
     }
 }
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ public partial class Form1 : Form
+ {
+     public Form1()
+     {
+         InitializeComponent();
+     }
+
+     string[] isimler = new string[5];
+
+     int[] notlar = new int[5];
+
+     int index = 0;
 
 
+     private void button1_Click(object sender, EventArgs e)
+     {
+         isimler[index] = textBox1.Text;
+         notlar[index] = int.Parse(textBox2.Text);
+         index++;
+         if (index == 5)
+         {
+             button1.Enabled = false;
+             textBox1.Text = string.Empty;
+             textBox1.Text = string.Empty;
+             for (int i = 0; i < 5; i++)
+             {
+              listBox1.Items.Add(isimler[i] + "=>" + notlar[i]);
+               
+             }
+           
+         }
+     }
+
+     private void button2_Click(object sender, EventArgs e)
+     {
+         int toplam = 0;
+         foreach (int i in notlar) {
+         toplam+= i;
+         }
+         double ort=toplam/5;
+         label3.Text=ort.ToString();
+
+
+         int enb = 0;
+         foreach (int i in notlar)
+         {
+            if (i > enb)
+             {
+                 enb=i;
+             }
+         label2.Text=enb.ToString(); 
+         }
+
+         int enk = 100;
+         foreach (int i in notlar)
+         {
+             if (i < enk)
+             {
+                 enk = i;
+             }
+             label1.Text = enk.ToString();
+         }
     
 
