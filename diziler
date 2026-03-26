@@ -1,0 +1,38 @@
+namespace _5.hafta
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+
+        string[] isimler = new string[5];
+        int index = 0;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            isimler[index]=textBox1.Text;
+            index++;
+            if (index == 5)
+            {
+                button1.Enabled = false;
+                textBox1.Text=string.Empty;
+
+                foreach (string s in isimler)
+                {
+                    listBox1.Items.Add(s);
+                   
+                }           
+            }
+          
+            
+          
+     
+        }
+    }
+    
+}
+    
+
