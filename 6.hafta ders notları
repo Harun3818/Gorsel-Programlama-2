@@ -93,3 +93,157 @@
     
 }
     ----------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        int[] diziKaynak = new int[100];
+        int[] diziKopya = new int[100];
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Random rastgele = new Random();
+
+            for (int i = 0; i < diziKaynak.Length; i++)
+            {
+                diziKaynak[i] = rastgele.Next(0,100);
+
+            }
+            int sayac = 0;
+            while (sayac<100) 
+            {
+                listBox1.Items.Add(diziKaynak[sayac]);
+                sayac++;
+            }
+
+            
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int sayac = 0;
+            while (sayac<100) {
+                diziKopya[sayac] = diziKaynak[sayac];
+                sayac++;
+
+
+            }
+
+            sayac=0;
+            while (sayac<100)
+            {
+                listBox2.Items.Add(diziKopya[sayac]);
+                sayac++;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int sayac = 0;
+            int tek = 0;
+            int çift = 0;
+            int tektoplam = 0;
+            int çifttoplam = 0;
+            int tekOrtalama = 0;
+            int ciftOrtalama = 0;
+           
+            while (sayac<100) 
+            {
+                if (diziKaynak[sayac]%2==0)
+                {
+
+                    çift++;
+                    çifttoplam += diziKaynak[sayac];
+                   
+
+                }
+                else
+                {
+                 
+                    tektoplam+= diziKaynak[sayac];
+                   
+                }
+                tek = 100 - çift;
+                sayac++;
+
+            }
+          
+
+            tekOrtalama = tektoplam / tek;
+                ciftOrtalama = çifttoplam / çift;
+
+
+
+
+
+            label1.Text = "teksayıların sayısı =" + tek;
+            label2.Text="çiftsayıların sayısı =" + çift;
+            label3.Text = "tek sayıların toplamı =" + tektoplam;
+            label4.Text = "çift sayıların toplamı =" + çifttoplam;
+            label5.Text = "tek sayıların ortalama =" + tekOrtalama;
+            label6.Text = "çift sayıların ortalama =" + ciftOrtalama;
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int enbüyük = 0;
+            int enkücük = 100;
+
+            for (int i = 0; i < diziKaynak.Length; i++)
+            {
+                if (diziKaynak[i]>enbüyük)
+                {
+                    enbüyük = diziKaynak[i];
+                }
+                if (diziKaynak[i]<enkücük)
+                {
+                    enkücük = diziKaynak[i];
+                }
+
+              
+            }
+            label7.Text = "dizin en böyük" + enbüyük;
+            label8.Text = "dizin en kücük" + enkücük;
+
+            listBox1.SelectedItem = enbüyük;
+            listBox1.SelectedItem = enkücük;
+
+            
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Array.Sort(diziKaynak);
+            int sayac = 0;
+            while (sayac < 100)
+            {
+                listBox3.Items.Add(diziKaynak[sayac]);
+                sayac++;
+            }
+        }
+    }
+    
+}
+
+
+
+
