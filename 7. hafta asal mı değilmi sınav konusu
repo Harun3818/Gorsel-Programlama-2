@@ -1,0 +1,29 @@
+
+        private bool Asalbul(int a)
+        {
+           
+
+            for (int i = 2; i < a; i++)
+            {
+                if (a % i == 0)
+                {
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int sayi = Convert.ToInt32(textBox1.Text);
+            if (Asalbul(sayi) == true)
+            {
+                label1.Text = "asal sayıdır";
+
+            }
+            else
+            {
+                label1.Text = "asal değil";
+            }
+        }
