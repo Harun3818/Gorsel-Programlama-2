@@ -7,3 +7,14 @@
 
             
         }
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+{
+    char myChar = e.KeyChar;  
+    int harun = (int)myChar;
+    textBox2.Text= harun.ToString();
+
+    string binary=Convert.ToString(harun,2);
+    textBox3.Text = binary;
+    
+}
