@@ -1,0 +1,10 @@
+C:\Users\V4SSENN\source\repos\devpiramit\bin\Debug\devpiramit.exe.config
+C:\Users\V4SSENN\source\repos\devpiramit\bin\Debug\devpiramit.exe
+C:\Users\V4SSENN\source\repos\devpiramit\bin\Debug\devpiramit.pdb
+C:\Users\V4SSENN\source\repos\devpiramit\obj\Debug\devpiramit.csproj.AssemblyReference.cache
+C:\Users\V4SSENN\source\repos\devpiramit\obj\Debug\devpiramit.Form1.resources
+C:\Users\V4SSENN\source\repos\devpiramit\obj\Debug\devpiramit.Properties.Resources.resources
+C:\Users\V4SSENN\source\repos\devpiramit\obj\Debug\devpiramit.csproj.GenerateResource.cache
+C:\Users\V4SSENN\source\repos\devpiramit\obj\Debug\devpiramit.csproj.CoreCompileInputs.cache
+C:\Users\V4SSENN\source\repos\devpiramit\obj\Debug\devpiramit.exe
+C:\Users\V4SSENN\source\repos\devpiramit\obj\Debug\devpiramit.pdb
