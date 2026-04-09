@@ -18,3 +18,31 @@ private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
     textBox3.Text = binary;
     
 }
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   private void button1_Click(object sender, EventArgs e)
+   {
+      int a=int.Parse(textBox1.Text);
+
+       int sayac = 1;
+
+       int toplam=0;
+
+       while(sayac < a) 
+       { 
+           if(a%sayac==0) 
+           {
+               toplam += sayac;
+
+           }
+           sayac++;
+       }
+
+       if(toplam==a)
+       {
+           label1.Text = "bu sayı mükemmeldir";
+       }
+       else { label1.Text = "bu sayı mükemmel değildir"; }
+          
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
