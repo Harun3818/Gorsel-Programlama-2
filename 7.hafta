@@ -1,0 +1,9 @@
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char myChar = e.KeyChar;  
+            int asciiValue = (int)myChar;
+            textBox2.Text= asciiValue.ToString();
+
+            
+        }
