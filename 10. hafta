@@ -1,0 +1,37 @@
+  public partial class Form1 : Form
+  {
+      public Form1()
+      {
+          InitializeComponent();
+      }
+
+      string adı = "Harun";
+      string sifre ="1234";
+
+      private void button1_Click(object sender, EventArgs e)
+      {
+
+          if ((string.IsNullOrEmpty(textBox1.Text)) || (string.IsNullOrEmpty(textBox2.Text)))
+          {
+              MessageBox.Show("kullanıcı adını ve şifre giriniz : ", "uyarı");
+          }
+         
+          else 
+          
+          
+          if ((textBox1.Text == adı) && (textBox2.Text == sifre))
+          {
+              this.Hide();
+              Form2 frm = new Form2();
+              frm.ShowDialog();
+            
+          }
+          else
+          {
+              MessageBox.Show("kullanıcı adı ve şifre hatalı");
+          }
+
+
+
+
+      }
