@@ -1,0 +1,34 @@
+ public partial class Form2 : Form
+ {
+     public Form2()
+     {
+         InitializeComponent();
+     }
+     OleDbConnection c=new OleDbConnection();
+
+     private void button1_Click(object sender, EventArgs e)
+     {
+        
+             c.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=prestige.accdb";
+             c.Open();
+             String query="SELECT COUNT(*) FROM guvenlik WHERE kul_adi=? AND sifre=?";
+             using(OleDbCommand cmd = new OleDbCommand(query,c))
+             {
+                 cmd.Parameters.AddWithValue("@p1",textBox1.Text);
+                 cmd.Parameters.AddWithValue("@p2", textBox2.Text);
+
+                 int sonuc = (int)cmd.ExecuteScalar();
+
+                 if (sonuc > 0)
+                 {
+                     MessageBox.Show("giriş başarılı");
+                     Form1 form = new Form1();
+                     this.Hide();
+                     form.ShowDialog();
+                 }
+                 else
+                 {
+                     MessageBox.Show("kullanıcı adi şifre hatalı");
+                 }
+             }
+         
